@@ -7,7 +7,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 })
 
 export class UserService {
-    private APIURL = 'http://localhost:3000/api';
+    private APIURL = 'https://relieveitoutbackend.herokuapp.com/api';
     constructor(private http: HttpClient) { }
 
     registerUser(newUser: User): Promise<void | User> {

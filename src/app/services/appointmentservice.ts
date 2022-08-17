@@ -7,7 +7,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 })
 
 export class AppointmentService {
-    private APIURL = 'http://localhost:3000/apiappointment';
+    private APIURL = 'https://relieveitoutbackend.herokuapp.com/apiappointment';
     constructor(private http: HttpClient) { }
 
     private handleError(error: any) {

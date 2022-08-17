@@ -7,7 +7,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 })
 
 export class RatingService {
-  private APIURL = 'http://localhost:3000/apirating';
+  private APIURL = 'https://relieveitoutbackend.herokuapp.com/apirating';
   constructor(private http: HttpClient) { }
 
   registerRating(newRating: Rating): Promise<void | Rating> {
