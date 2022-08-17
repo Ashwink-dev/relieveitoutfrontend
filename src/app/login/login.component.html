@@ -1,0 +1,51 @@
+<section>
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-2" style="padding-left: 8%; padding-right: 8%;">
+                <h3>Login as Client</h3>
+                <form (ngSubmit)="LoginClient(ClientUser)">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="ClientUser.email" name="email" id="emailCli" class="form-control" placeholder="Your Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" [(ngModel)]="ClientUser.password" name="password" id="passwordCli" class="form-control" placeholder="Your Password *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                    <div class="form-group">
+                        <a routerLink="/signup" class="btnForgetPwd">Sign Up</a>
+                    </div>
+                    <div class="form-group">
+                        <a routerLink="#" class="btnForgetPwd">Forget Password?</a>
+                    </div>
+                </form>
+            </div>
+            <div class= "col-md-6 login-form-1" style="padding-left: 8%; padding-right: 8%;">
+                <!--div class="login-logo">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                </div-->
+                <h3>Login as Professional</h3>
+                <form (ngSubmit)="LoginProfessional(ProfessionalUser)">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="ProfessionalUser.email" name="email" id="emailPro" class="form-control" placeholder="Your Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" [(ngModel)]="ProfessionalUser.password" name="password" id="passwordPro" class="form-control" placeholder="Your Password *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                    <div class="form-group">
+                        <a routerLink="/signup" class="btnForgetPwd">Sign Up</a>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a>
+                    </div>
+                    <a routerLink="/adminlogin" class="adminlogin">Admin Login</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>

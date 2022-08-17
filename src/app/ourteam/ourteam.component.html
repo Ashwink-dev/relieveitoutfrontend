@@ -1,0 +1,119 @@
+<section>
+  <div class="container team">
+    <div class="row">
+      
+      <div class="col col-lg-2 sidebar">
+        <h4>All Especialities</h4>
+        <p>Art Therapy</p>
+        <p>Jungian</p>
+        <p>Hypnotherapist</p>
+        <p>Cognitive Behavioural</p>
+        <p>Trauma Focused</p> 
+        
+        
+      
+       
+        <!-- <div class = "container">
+          <ul>
+            <li *ngFor = "let checkbox of checkboxcity">
+              <input type = "{{checkbox.type}}" value={{checkbox.city}} (change)="onchange($event)">{{checkbox.city}}
+            </li>
+          </ul>
+        </div>   
+       -->
+
+      <!-- <div class = "container">
+        <ul>
+          <li *ngFor = "let checkbox of checkboxservice">
+            <input type = "{{checkbox.type}}" value={{checkbox.typeOfService}} (change)="onchange($event)">{{checkbox.typeOfService}}
+          </li>
+        </ul>
+      </div>-->   
+    </div> 
+
+      <div class="col col-lg-1 "></div>
+      
+      <div class="col col-lg-9" style="position: relative;">
+        <!-- <button class="filter" >Filter  <img src="assets/icons/sliders.svg" alt="..." /></button> -->
+        
+        <div class = "filter"> 
+          <app-filter  id="customfilter"
+      [list]="filterList" 
+      (onFilterChange)="filterChange($event)" >
+   </app-filter>
+        </div>
+        <br><br><br><br>
+        <div class="list">
+          
+          <div class="item col-lg-12"  *ngFor="let professional of professionals;">
+            <div class="photo"> 
+                <div class="photoCircle"><img src="{{professional.image}}" alt="..."/></div>
+            </div>
+            <div class="rate"> 
+              <p><img src="assets/icons/star.svg" alt="..." />{{professional.rating}}</p> 
+            </div>
+            <div class="name">   
+              <p><strong>{{professional.username}}</strong></p>
+              <h6>{{professional.speciality}}</h6> 
+            </div>
+            <div class="appBtn"> <a routerLink= "{{'/create-appointment/'+ professional._id+'/'+professional.username}}">Make an appointment</a></div>
+           </div>
+
+           <!-- "{{'/create-appointment/' + professional._id }}         -->
+<!--            
+          <div class="item  col-lg-12"> 
+            <div class="photo"> 
+              <div class="photoCircle"> 
+                <p>Photo</p>
+              </div>
+            </div>
+            <div class="rate"> 
+              <p>Rate      <img src="assets/icons/star.svg" alt="..." />    4.9</p> 
+            </div>
+            <div class="name">  
+              <p>dr. John Doe</p>
+              <h6>Jungian</h6> 
+            </div>
+            <div class="appBtn">  <a href="cal_appointment.html">Make an appointment</a></div>
+          </div>
+          <div class="item  col-lg-12">
+            <div class="photo"> 
+              <div class="photoCircle"> 
+                <p>Photo</p>
+              </div>
+            </div>
+            <div class="rate"> 
+              <p>Rate      <img src="assets/icons/star.svg" alt="..." />   4.9</p> 
+            </div>
+            <div class="name">  
+              <p>dr. John Doe</p>
+              <h6>Hypnotherapist</h6> 
+            </div>
+            <div class="appBtn">  <a href="cal_appointment.html">Make an appointment</a></div>
+          </div>
+          <div class="item  col-lg-12">
+            <div class="photo"> 
+              <div class="photoCircle"> 
+                <p>Photo</p>
+              </div>
+            </div>
+            <div class="rate"> 
+              <p>Rate      <img src="assets/icons/star.svg" alt="..." />    4.9</p> 
+            </div>
+            <div class="name">  
+              <p>dr. John Doe</p>
+              <h6>Cognitive Behavioural</h6> 
+            </div>
+            <div class="appBtn"> <a href="cal_appointment.html">Make an appointment</a></div>
+          </div> 
+        </div>
+      </div> -->  
+
+      </div>
+      </div>
+    </div>
+
+  
+   </div>
+ 
+</section>
