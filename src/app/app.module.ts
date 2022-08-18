@@ -28,7 +28,6 @@ import { AdminsignupComponent } from './adminsignup/adminsignup.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
-import { GenericListFilterModule } from 'generic-list-filter';
 import { RatingComponent } from './rating/rating.component';
 import { CreateappointmentformComponent } from './createappointmentform/createappointmentform.component'
 
@@ -61,7 +60,6 @@ import { CreateappointmentformComponent } from './createappointmentform/createap
     FormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    GenericListFilterModule,
     RouterModule.forRoot([
       { path: '', component: HomepageComponent },
       { path: 'login', component: LoginComponent },
