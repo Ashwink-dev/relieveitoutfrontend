@@ -28,6 +28,7 @@ import { AdminsignupComponent } from './adminsignup/adminsignup.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
+import { GenericListFilterComponent } from './lib/generic-list-filter/lib/generic-list-filter.component'
 import { RatingComponent } from './rating/rating.component';
 import { CreateappointmentformComponent } from './createappointmentform/createappointmentform.component'
 
@@ -52,7 +53,8 @@ import { CreateappointmentformComponent } from './createappointmentform/createap
     AdmindashboardComponent,
     CreateAppointmentComponent,
     RatingComponent,
-    CreateappointmentformComponent
+    CreateappointmentformComponent,
+    GenericListFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,7 @@ import { CreateappointmentformComponent } from './createappointmentform/createap
       { path: 'adminlogin', component: AdminloginComponent },
       { path: 'adminsignup', component: AdminsignupComponent },
       { path: 'admindashboard', component: AdmindashboardComponent },
-      { path: 'create-appointment/:professionalId/:doctorname', component: CreateAppointmentComponent },
+      { path: 'create-appointment/:professionalId/:doctorname/:speciality', component: CreateAppointmentComponent },
       { path: 'clientdashboard', component: ClientdashboardComponent },
       { path: 'professionaldashboard', component: ProfessionaldashboardComponent },
       { path: 'rating/:doctorname/:clientname', component: RatingComponent },
