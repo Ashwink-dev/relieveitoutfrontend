@@ -179,7 +179,7 @@ export class CreateAppointmentComponent implements OnInit {
   }
 
   handleEvent(action: string, event: CalendarEvent): void {
-    console.log('test')
+    this.toastr.info('We are working on it !. Wait next version!');
   }
 
   addEvent(): void {
