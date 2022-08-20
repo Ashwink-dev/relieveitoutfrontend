@@ -136,8 +136,8 @@ export class CreateAppointmentComponent implements OnInit {
   events: CalendarEvent[] = [];
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
+    this.closeOpenMonthViewDay();
     if (events.length === 0) {
-     
       this.newAppointment.doctorName = this.doctorName
       this.newAppointment.clientName = JSON.parse(localStorage.getItem("userDeatils")).username
       this.newAppointment.speciality = this.doctorSpeciality
