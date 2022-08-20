@@ -55,7 +55,7 @@ const colors: Record<string, EventColor> = {
 export class CreateAppointmentComponent implements OnInit {
   @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
   professionals: User[];
-  view: CalendarView = CalendarView.Month;
+  view: CalendarView = CalendarView.Day;
   CalendarView = CalendarView;
   viewDate: Date = new Date();
   actions: CalendarEventAction[] = [
@@ -103,14 +103,16 @@ export class CreateAppointmentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => this.fetchappointments(this.appointmentDoctor), 2000)
+    this.fetchappointments(this.appointmentDoctor)
     this.doctorName = this.route.snapshot.paramMap.get('doctorname');
     this.doctorSpeciality = this.route.snapshot.paramMap.get('speciality');
+
   }
 
   public fetchappointments(newAppointment: Appointment): void {
     this.appointmentService.getAppointments(null).then((response) => {
       if (response) {
+
         this.events = (response as Appointment[]).map((appointmentDetails) => {
           return {
             start: startOfDay(new Date(appointmentDetails.dateTime)),
@@ -125,8 +127,9 @@ export class CreateAppointmentComponent implements OnInit {
             },
             draggable: true,
           }
-
         })
+       
+        document.getElementById('btncalmonth').click();
       } else {
 
       }
@@ -201,6 +204,7 @@ export class CreateAppointmentComponent implements OnInit {
   }
 
   setView(view: CalendarView) {
+    console.log(view, 'view')
     this.view = view;
   }
 

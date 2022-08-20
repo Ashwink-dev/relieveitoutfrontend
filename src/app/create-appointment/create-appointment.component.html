@@ -28,15 +28,15 @@
                 <div class="col-md-4">
                     <div class="btn-group">
                         <div class="btn btn-primary" (click)="setView(CalendarView.Month)"
-                            [class.active]="view === CalendarView.Month">
+                            [class.active]="view === CalendarView.Month" id="btncalmonth">
                             Month
                         </div>
                         <div class="btn btn-primary" (click)="setView(CalendarView.Week)"
-                            [class.active]="view === CalendarView.Week">
+                            [class.active]="view === CalendarView.Week" id="btncalweek">
                             Week
                         </div>
                         <div class="btn btn-primary" (click)="setView(CalendarView.Day)"
-                            [class.active]="view === CalendarView.Day">
+                            [class.active]="view === CalendarView.Day" id="btncalday">
                             Day
                         </div>
                     </div>
